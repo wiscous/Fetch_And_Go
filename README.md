@@ -1,6 +1,6 @@
 # Fetch_And_Go
 ## Setup
-1 .Ensure the `Go` programming language is installed on your system.
+1. Ensure the `Go` programming language is installed on your system.
    You can use your system package manager (apt, pacman, homebrew, ...) or you can follow [https://go.dev/doc/install](https://go.dev/doc/install). Make sure `go version` runs successfully.
    The code was tested with `go 1.20.1`, but earlier versions such as 1.18 should also run.
    
