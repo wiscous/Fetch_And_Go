@@ -28,6 +28,7 @@ func (self ByTimestamp) Less(i, j int) bool {
 	return self[i].Timestamp.Before(self[j].Timestamp)
 }
 
+// Deduct points from the pointsBalance in the order of Transaction timestamp .
 func deductPoints(pointsBalance []*Transaction, points int) []*Transaction {
 	// Index of the head of the final queue of non-zero transactions remaining after deduction.
 	head := 0
@@ -158,7 +159,6 @@ func main() {
 		if err != nil {
 			fmt.Fprintln(os.Stderr, "Could not parse timestamp:", err)
 		}
-
 
 		transaction := &Transaction{payer, points, timestamp}
 		transactions = append(transactions, transaction)
